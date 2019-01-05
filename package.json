@@ -1,0 +1,24 @@
+{
+  "name": "contact-email",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "*.js",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "node_modules/.bin/standard && node_modules/.bin/claudia test-lambda test-event.json",
+    "tail": "node_modules/.bin/smoketail -f /aws/lambda/contact-email",
+    "start": "claudia create --name contact-email --region us-east-1 --api-module contact-email --timeout 60",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "smoketail": "0.1.0",
+    "standard": "6.0.8"
+  },
+  "dependencies": {
+    "claudia-api-builder": "3.0.0",
+    "nodemailer": "^5.0.0",
+    "nodemailer-smtp-transport": "^2.7.4"
+  }
+}

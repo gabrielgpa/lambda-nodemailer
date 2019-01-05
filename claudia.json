@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "contact-email-executor",
+    "name": "contact-email",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "ebptjlx5l5",
+    "module": "contact-email"
+  }
+}
